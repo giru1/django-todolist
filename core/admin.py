@@ -18,5 +18,4 @@ class UserAdmin(BaseUserAdmin):
             return fieldsets
         return [(name, {'fields': [f for f in fields if f != 'password']}) for name, fields in fieldsets]
 
-admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
